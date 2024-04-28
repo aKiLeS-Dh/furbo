@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sapo</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+    .cool-text {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        animation: pulse 1s infinite alternate;
+        color: white;
+        text-shadow: -1px -1px 0 black,  
+                     1px -1px 0 black,
+                     -1px 1px 0 black,
+                     1px 1px 0 black;
+    }
+
+    .cool-text2 {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        animation: pulse2 0.3s infinite alternate;
+        color: white;
+        text-shadow: -1px -1px 0 black,  
+                     1px -1px 0 black,
+                     -1px 1px 0 black,
+                     1px 1px 0 black;
+    }
+
+    @keyframes pulse {
+        from { transform: scale(1); color: white; }
+        to { transform: scale(2.2); color: #008000; }
+    }
+
+    @keyframes pulse2 {
+        from { transform: scale(1); color: white; }
+        to { transform: scale(1.3); color: red; }
+    }
+
+    /* Center the video */
+    video {
+        display: block;
+        margin: 0 auto;
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="cool-text">🖕betis🖕</div>
+ <br> <br>
+
+    <video controls width="50%" height="50%">
+        <!-- Fallback for browsers that don't support HLS -->
+        <source src="https://nes05.jobdone.top:8088/live/fgvsg556hcfgnh/playlist.m3u8?vidictid=197788803298&id=116864&pk=b2c4c8919e5a464b7d6d37a476c429d6bad5c1d230d87df631311f1a0433c0d68bdfcef2988140c213cd78c4c4598ddd52130642a2421af8cb2988157dc2d7df" type="application/x-mpegURL">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+      if (Hls.isSupported()) {
+        var video = document.querySelector('video');
+        var hls = new Hls();
+
+        hls.loadSource('https://nes05.jobdone.top:8088/live/fgvsg556hcfgnh/playlist.m3u8?vidictid=197788803298&id=116864&pk=b2c4c8919e5a464b7d6d37a476c429d6bad5c1d230d87df631311f1a0433c0d68bdfcef2988140c213cd78c4c4598ddd52130642a2421af8cb2988157dc2d7df');
+        hls.attachMedia(video);
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = 'https://nes05.jobdone.top:8088/live/fgvsg556hcfgnh/playlist.m3u8?vidictid=197788803298&id=116864&pk=b2c4c8919e5a464b7d6d37a476c429d6bad5c1d230d87df631311f1a0433c0d68bdfcef2988140c213cd78c4c4598ddd52130642a2421af8cb2988157dc2d7df';
+      }
+    </script>
+ <br> <br>
+<div class="cool-text2">🤍❤️sevilla🤍❤️</div>
+</body>
+</html>
